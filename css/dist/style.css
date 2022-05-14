@@ -577,6 +577,14 @@ body::-webkit-scrollbar-thumb {
   z-index: 1;
 }
 
+.award-list > li .photo-info .info-image:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  z-index: 2;
+}
+
 .award-list > li .photo-info .info-image img {
   width: 100%;
   -webkit-transition: -webkit-transform 0.3s linear;
@@ -732,6 +740,11 @@ body::-webkit-scrollbar-thumb {
 
 .award-list > li.active .info-image:before {
   width: 0;
+}
+
+.award-list > li.active .info-image:after {
+  -webkit-animation: typo-after .8s ease-in-out;
+          animation: typo-after .8s ease-in-out;
 }
 
 .award-list > li.active .info-text {

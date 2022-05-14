@@ -228,6 +228,13 @@ body::-webkit-scrollbar-thumb {
                     transition: width .5s ease-in-out;
                     z-index: 1;
                 }
+                &:after {
+                    content: '';
+                    position: absolute;
+                    top: 0;
+                    bottom: 0;
+                    z-index: 2;
+                }
                 img {
                     width: 100%;
                     transition: transform 0.3s linear;
@@ -343,6 +350,9 @@ body::-webkit-scrollbar-thumb {
             .info-image {
                 &:before {
                     width: 0;
+                }
+                &:after {
+                    animation: typo-after .8s ease-in-out;
                 }
             }
             .info-text {
