@@ -6,7 +6,7 @@ function scrollEvent() {
     var winTopPos = $window.scrollTop();
     var winBtmPos = (winTopPos + winHeight);
 
-    $.each($animationElements, function(q) {
+    $.each($animationElements, function() {
         var $element = $(this);
         var elementHeight = $element.outerHeight();
         var elementTopPos = $element.offset().top;
@@ -19,20 +19,28 @@ function scrollEvent() {
         }
     });
 }
-function btnTop() {
-    $('.btn-top').on("click", function(){
+function pageTop() {
+    var btnTop = $('.btn-top');
+
+    btnTop.addClass('move');
+    btnTop.on("click", function(){
         $('html, body').animate({scrollTop: '0'}, 300);
-    });   
+    });
 }
 $(window).on({
     "load":function(){
         scrollEvent();
-        btnTop();
+        pageTop();
     },
     "resize":function(){
         scrollEvent();
     },
     "scroll":function(){
         scrollEvent();
+        if ($(window).scrollTop() == 0) {
+            $('.btn-top').addClass('move');
+        } else {
+            $('.btn-top').removeClass('move');
+        }
     }
 });

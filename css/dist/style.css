@@ -410,6 +410,9 @@ body::-webkit-scrollbar-thumb {
   -webkit-clip-path: polygon(0 80%, 100% 80%, 50% 0);
           clip-path: polygon(0 80%, 100% 80%, 50% 0);
   background: rgba(0, 0, 0, 0.8);
+}
+
+.page-quick .btn-top.move {
   -webkit-animation: rotate-move 1s ease-in-out;
           animation: rotate-move 1s ease-in-out;
 }

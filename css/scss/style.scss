@@ -138,7 +138,9 @@ body::-webkit-scrollbar-thumb {
         text-align: center;
         clip-path: polygon(0 80%, 100% 80%, 50% 0);
         background: rgba(0, 0, 0, .8);
-        animation: rotate-move 1s ease-in-out;
+        &.move {
+            animation: rotate-move 1s ease-in-out;
+        }
     }
 }
 @keyframes rotate-move {
