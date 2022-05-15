@@ -34,15 +34,14 @@
         bottom: 0;
     }
     &:before {
-        width: 100%;
         right: 0;
         background: #fff;
-        animation: typo-before 1s ease-in-out forwards;
+        animation: typo-before 1s ease-in-out;
     }
     &:after {
         width: 0;
         background: $color-black;
-        animation: typo-after 1s ease-in-out forwards;
+        animation: typo-after 1s ease-in-out;
     }
 }
 @keyframes typo-before{0%{right:0;width:100%}100%{width:0}}
