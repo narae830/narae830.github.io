@@ -80,7 +80,7 @@ body::-webkit-scrollbar-thumb {
         top: 40px;
         left: 0;
         width: 100%;
-        padding: 0 40px;
+        padding: 0 60px;
         .side {
             float: right;
         }
@@ -490,7 +490,7 @@ body::-webkit-scrollbar-thumb {
     }
     .header {
         &-inner {
-            @include vw-convert-laptop(padding, 0 40);
+            @include vw-convert-laptop(padding, 0 120);
         }
     }
     /* intro */

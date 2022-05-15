@@ -335,7 +335,7 @@ body::-webkit-scrollbar-thumb {
   top: 40px;
   left: 0;
   width: 100%;
-  padding: 0 40px;
+  padding: 0 60px;
 }
 
 .header-inner .side {
@@ -895,7 +895,7 @@ body::-webkit-scrollbar-thumb {
     padding: 0vw 8.33333vw;
   }
   .header-inner {
-    padding: 0vw 2.77778vw;
+    padding: 0vw 8.33333vw;
   }
   /* intro */
   .section-intro {
