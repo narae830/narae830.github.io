@@ -26,9 +26,6 @@
     position: relative;
     overflow: hidden;
     display: inline-block;
-    &:nth-child(even) {
-        margin-left: 15%;
-    }
     &:before, &:after {
         content: '';
         display: inline-block;
@@ -37,17 +34,19 @@
         bottom: 0;
     }
     &:before {
+        width: 100%;
         right: 0;
         background: #fff;
-        animation: typo-before 1s ease-in-out;
+        animation: typo-before 1s ease-in-out forwards;
     }
     &:after {
+        width: 0;
         background: $color-black;
-        animation: typo-after 1s ease-in-out;
+        animation: typo-after 1s ease-in-out forwards;
     }
 }
 @keyframes typo-before{0%{right:0;width:100%}100%{width:0}}
-@keyframes typo-after{0%{left:0;width:0}50%{width:100%}to{right:0;width:0}}
+@keyframes typo-after{0%{left:0;width:0}50%{left:0;width:100%}to{left:100%;width:0}}
 
 /* layout */
 body::-webkit-scrollbar {

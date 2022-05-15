@@ -224,10 +224,6 @@ input::-ms-clear {
   display: inline-block;
 }
 
-.active .typo-move:nth-child(even) {
-  margin-left: 15%;
-}
-
 .active .typo-move:before, .active .typo-move:after {
   content: '';
   display: inline-block;
@@ -237,16 +233,18 @@ input::-ms-clear {
 }
 
 .active .typo-move:before {
+  width: 100%;
   right: 0;
   background: #fff;
-  -webkit-animation: typo-before 1s ease-in-out;
-          animation: typo-before 1s ease-in-out;
+  -webkit-animation: typo-before 1s ease-in-out forwards;
+          animation: typo-before 1s ease-in-out forwards;
 }
 
 .active .typo-move:after {
+  width: 0;
   background: #111;
-  -webkit-animation: typo-after 1s ease-in-out;
-          animation: typo-after 1s ease-in-out;
+  -webkit-animation: typo-after 1s ease-in-out forwards;
+          animation: typo-after 1s ease-in-out forwards;
 }
 
 @-webkit-keyframes typo-before {
@@ -275,10 +273,11 @@ input::-ms-clear {
     width: 0;
   }
   50% {
+    left: 0;
     width: 100%;
   }
   to {
-    right: 0;
+    left: 100%;
     width: 0;
   }
 }
@@ -289,10 +288,11 @@ input::-ms-clear {
     width: 0;
   }
   50% {
+    left: 0;
     width: 100%;
   }
   to {
-    right: 0;
+    left: 100%;
     width: 0;
   }
 }
